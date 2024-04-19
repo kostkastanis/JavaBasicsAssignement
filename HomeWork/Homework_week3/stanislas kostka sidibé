@@ -1,0 +1,58 @@
+7
+// stanislas kostka sidibe 2311502266
+import java.util.*;
+public class SumOfDigitsStan {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        int num, originalNum, sum=0;
+        System.out.println("Please input a number");
+        num = input.nextInt();
+        originalNum = num;
+        while(num>0){
+            sum += num % 10;
+            num /= 10;
+        }
+    System.out.println("Sum of the digits in "+ originalNum + " are " + sum);
+    }
+}
+8 
+// stanislas kostka sidibe 2311502266
+import java.util.*;
+public class MultiplicationTableStan {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        for(int i=1; i<=10; i++){
+            for(int j=1; j<=10; j++){
+                System.out.print(i + "*" + j+ "="+ i*j);
+                System.out.print("\t");
+            }
+            System.out.println("");
+        }
+    }
+}
+9
+// stanislas kostka sidibe 2311502266
+import java.util.*;
+public class PrimeCheckerStan {
+    public static boolean isPrime(int num){
+        for(int i=2; i<= num/2; i++){
+            if(num % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+    static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        int num;
+        System.out.println("Please enter a number");
+        num = input.nextInt();
+        if(isPrime(num)){
+            System.out.println(num + " is a prime number :)");
+        }
+        else{
+            System.out.println(num + " is not a prime number !!");
+        }
+
+    }
+}
