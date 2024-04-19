@@ -1,0 +1,62 @@
+4
+// stanislas kostka sidibe 2311502266
+import java.util.*;
+public class FactorialCalculatorStan{
+    static Scanner input =new Scanner(System.in);
+    public static void main(String[] args) {
+        int factorial,result=1;
+        System.out.println("Enter a number you want to use for factorial operation: ");
+        factorial = input.nextInt();
+        for(int i=1; i<=factorial; i++){
+            result *= i;
+        }
+        System.out.println("The result is : " + result);
+    }
+}
+5
+// stanislas kostka sidibe 2311502266
+import java.util.*;
+public class FibonacciSequenceStan {
+    static Scanner input =new Scanner(System.in);
+    public static void main(String[] args) {
+        int endTerm, firstTerm =0, secondTerm =1;
+        System.out.println("Please enter the endterm");
+        endTerm = input.nextInt();
+        int nextTerm;
+        for(int i=0; i<endTerm; i++){
+            System.out.print(firstTerm + ", ");
+            nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+        }
+    }
+6
+// stanislas kostka sidibe 2311502266
+import java.util.*;
+public class PalindromeCheckStan {
+    public static boolean isPalindrome(String word){
+        if(word.equals(reverse(word))){
+            return true;
+        }
+        return false;
+    }
+    public static String reverse(String str) {
+        return new StringBuilder(str).reverse().toString();
+    }
+
+    static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        String word;
+        System.out.println("Enter a word");
+        word = input.next();
+        if(isPalindrome(word)){
+            System.out.println(word + " is a palindrome");
+        }
+        else{
+            System.out.println(word + " is not palindrome");
+        }
+
+    }
+}
+
