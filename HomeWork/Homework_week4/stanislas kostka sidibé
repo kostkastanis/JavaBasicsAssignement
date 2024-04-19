@@ -1,0 +1,91 @@
+10
+// stanislas kostka sidibe 2311502266
+import java.util.*;
+public class ReverseStringStan{
+    static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        String original;
+        System.out.println("Enter the string you want to reverse: ");
+        original = input.next();
+
+        String reversed = reverseString(original);
+
+        System.out.println("Original string: " + original);
+        System.out.println("Reversed string: " + reversed);
+    }
+    public static String reverseString(String str) {
+        char[] charArray = str.toCharArray();
+        int left = 0;
+        int right = charArray.length - 1;
+
+        while (left < right) {
+            char temp = charArray[left];
+            charArray[left] = charArray[right];
+            charArray[right] = temp;
+            left++;
+            right--;
+        }
+        return new String(charArray);
+    }
+}
+11
+// stanislas kostka sidibe 2311502266
+public class ArraySumAverageStan {
+    public static void main(String[] args){
+        int array1[] ={10,20,30,40,50,60,70,80,90,100};
+        int array2[] ={110,120,130,140,150,160,170,180,190,200};
+        int sum1 = 0, average1 = 0, sum2 = 0, average2 = 0;
+        for(int i=0; i<array1.length;i++){
+            sum1 += array1[i];
+            average1 = sum1 / array1.length;
+        }
+        for(int j=0; j<array2.length; j++){
+            sum2 += array2[j];
+            average2 = sum2 / array2.length;
+        }
+        System.out.println("Sum of the numbers in array1 is = "+ sum1 + " The average of the numbers is = "+ average1);
+        System.out.println("Sum of the numbers in array2 is = "+ sum2 + " The average of the numbers is = "+ average2);
+
+    }
+}
+12 
+// stanislas kostka sidibe 2311502266
+public class ArraySortingStan {
+    public static void main(String[] args) {
+        int[] arr = {12, 1, 16, 8, 67, 4};
+
+        System.out.println("Original array:");
+        printArray(arr);
+
+        bubbleSort(arr);
+
+        System.out.println("\nSorted array:");
+        printArray(arr);
+    }
+    public static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        boolean swapped;
+
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Swap arr[j] and arr[j+1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) {
+                break;
+            }
+        }
+    }
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
